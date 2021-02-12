@@ -1,6 +1,11 @@
+/**
+ * @description This function requires additional setup with Gmail labels
+ *              which are then used to fetch email data from
+ */
+
 function newJobBoardSuggestions() {
-    var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("gmail_data") 
-    var label = GmailApp.getUserLabelByName("aaaNJBSugg");
+    var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('gmail_data');
+    var label = GmailApp.getUserLabelByName('aaaNJBSugg');
     var threads = label.getThreads();
       
     for (var i=0; i<threads.length; i++) {
