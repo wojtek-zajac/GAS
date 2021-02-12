@@ -4,12 +4,15 @@ function markRowLive() {
     var r = s.getActiveCell();
     var cellContent = r.getValue();
     
-    if(sheetName === "Assessments" && r.getColumn() === 2 && cellContent === "Live") { 
+    if (
+        sheetName === 'Assessments' &&
+        r.getColumn() === 2 &&
+        cellContent === 'Live'
+    ) { 
         var row = r.getRow();
         var time = new Date();
-        
-        // time = Utilities.formatDate(time, "GMT+01:00", "MM/dd/yy HH:mm:ss");   
-        time = Utilities.formatDate(time, "GMT+01:00", "MM/dd/yy"); 
+  
+        time = Utilities.formatDate(time, 'GMT+01:00', 'MM/dd/yy'); 
    
         SpreadsheetApp
             .getActiveSheet()
